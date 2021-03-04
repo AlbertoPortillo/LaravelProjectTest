@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(200, 200, 200);
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    display: contents;
+}
+.alert{
+    color: red;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+       position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

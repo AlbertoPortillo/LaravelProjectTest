@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Citas extends Migration
+class Consultorio extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class Citas extends Migration
      */
     public function up()
     {
-        Schema::create('citas', function (Blueprint $table) {
+        Schema::create('consultorio', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_user');
-            $table->date('fecha');
-            $table->time('hora');
+            $table->string('doctor_name');
+            $table->integer('telefono')->unique();
             $table->timestamps();
-            $table->foreign('id_user')->references('id')->on('pacientes');
         });
     }
 
@@ -30,6 +28,6 @@ class Citas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('citas');
+        Schema::dropIfExists('consultorio');
     }
 }

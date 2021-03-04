@@ -20,11 +20,6 @@
                     @else
                         <li class="nav-item"><a class="nav-link"href="{{ url('/home') }}"> Home </a></li>
                     @endif
-                    @if(Route::is('crear-paciente'))
-                        <li class="nav-item active"><a class="nav-link" class="active" href="{{ url('/create-pacient') }}"> <i class="fa fa-user-plus"></i> </a></li>
-                    @else
-                        <li class="nav-item"><a class="nav-link"href="{{ url('/create-pacient') }}"> <i class="fa fa-user-plus"></i> </a></li>
-                    @endif
             
                 </ul>
                 <a class="nav-link" href="{{ url('/logout') }}"> <span class="navbar-text" >LogOut</span></a>
